@@ -1,0 +1,59 @@
+/* -------------------------- */
+/*       - NAVIGATION -
+/* -------------------------- */
+
+// Main navigation wrapper
+.navigation-wrapper {
+    position: relative;
+    z-index: 200;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(1,25,54,0)), to(#091D35));
+    background: linear-gradient(0deg, rgba(1,25,54,0) 0%, #091D35 100%);
+}
+
+// Navigation
+.navigation {
+    width: 100%;
+    // height: 83px;
+    padding-top: 24px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    // Header Wrapper
+    &__header {
+        display: flex;
+        justify-content: center;
+    }
+    // Left and Right Side Content
+    &__left-content, &__right-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        ul { display: flex; align-items: center; justify-content: center; list-style: none; }
+        ul li { color: $color-white; font-size: 1.6rem; margin: 0 1rem; cursor: pointer; }
+    }
+}
+
+// Navigation Logo
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    margin: 0 12rem;
+    // Image
+    &__image {
+        height: 11rem;
+        width: 11rem;
+        margin: 0 auto;
+        // --- MEDIA QUERIES --- \\
+        @media only screen and (max-width: $bp-large) {
+            width: 130px;
+            top: -2px;
+        }
+        @media only screen and (max-width: $bp-small) {
+            width: 115px;
+            position: relative;
+            top: -1px;
+        }
+    }
+}

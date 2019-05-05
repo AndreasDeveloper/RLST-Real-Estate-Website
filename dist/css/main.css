@@ -1,0 +1,249 @@
+/* ------------------------------------------- */
+/* CLAERFIX MIXIN FOR THE GRID
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* MIXIN THAT CENTERS THE ELEMENTS TO VH
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* MIXIN FOR IMAGE BACKGROUND SETUP
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* MIXIN FOR ELEMENT POSITIONING | JUSTIFY / ALIGN
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* MIXIN FOR TEXT UNDERLINE | SPLITTER
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* MIXIN FOR POSITIONING THE TEXT IN SLIDER
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* MEDIA QUERY MANAGER
+/* ------------------------------------------- */
+/* // SIZES / DEVICES \\
+    0 - 600px > Phone
+    600 - 900px > Tablet Portrait
+    900 - 1200px > Tablet Landscape
+    [1200 - 18009 is where our normal style apply]
+    1800px + > Big Desktop
+
+    1em = 16px - KIM
+*/
+/* ------------------------------------------- */
+/* MEDIA QUERIES | SHORTCUT VERSION
+/* ------------------------------------------- */
+/* -------------------------- */
+/*       - BASIC SETUP -
+/* -------------------------- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /* DEFINES WHAT REM IS */
+  font-size: 62.5%;
+  /* Takes 62.5% of the default font size (16px). 100 / 16 = 62.5  */
+  /* || 1rem = 10px; 10px/16px = 62.5% || */ }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Raleway', 'Arial', 'serif';
+  background-color: #faf8f8;
+  overflow-x: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+/* -------------------------- */
+/*       - TYPOGRAPHY -                           
+/* -------------------------- */
+.heading-1 {
+  font-weight: 400;
+  font-size: 4.6rem;
+  letter-spacing: .2rem;
+  color: #fff; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-1 {
+      padding: 0 3rem; } }
+
+.heading-2 {
+  font-weight: 400;
+  font-size: 3.2rem;
+  letter-spacing: .1rem;
+  color: #000; }
+
+p {
+  font-family: 'Raleway'; }
+
+/* --- SEARCH BOX --- */
+.search-form {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem; }
+  .search-form__advanced-search {
+    color: #dddddd;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 4rem;
+    cursor: pointer; }
+  @media only screen and (max-width: 37.5em) {
+    .search-form {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: #faf8f8; } }
+  .search-form__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: #faf8f8;
+    border: none;
+    padding: 1.7rem 2rem;
+    border-radius: 10rem;
+    width: 37rem;
+    transition: all .2s;
+    margin-right: -3.25rem; }
+    .search-form__input:focus {
+      outline: none;
+      width: 38rem;
+      background-color: #ecebeb; }
+    .search-form__input::-webkit-input-placeholder {
+      font-weight: 100;
+      color: #5f5f5f; }
+  .search-form__input:focus + .search-form__button {
+    background-color: #ecebeb; }
+  .search-form__button {
+    border: none;
+    background-color: #faf8f8; }
+    .search-form__button:focus {
+      outline: none; }
+    .search-form__button:active {
+      transform: translateY(0.2rem); }
+  .search-form__icon {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.3rem;
+    fill: #333; }
+
+/* -------------------------- */
+/*         - HEADER -
+/* -------------------------- */
+.header {
+  height: 100vh; }
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #091D35;
+  opacity: 1;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  transition: opacity 500ms; }
+  .header-bg::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    background: rgba(25, 42, 86, 0.65);
+    z-index: 2; }
+  .header-bg::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    background: linear-gradient(215.14deg, rgba(198, 60, 70, 0) 68%, rgba(39, 60, 117, 0.48) 100%), linear-gradient(180deg, rgba(39, 60, 117, 0) 0%, rgba(39, 60, 117, 0) 50%);
+    z-index: 3; }
+
+.d-trans {
+  -webkit-transition-duration: 0ms;
+  -moz-transition-duration: 0ms;
+  transition-duration: 0ms; }
+
+#video-bg {
+  position: absolute;
+  bottom: 0%;
+  left: 55%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  z-index: -100;
+  margin: auto;
+  z-index: 1;
+  -webkit-transform: translateX(-55%) translateY(0%) scale(1.05);
+  -moz-transform: translateX(-55%) translateY(0%) scale(1.05);
+  -ms-transform: translateX(-55%) translateY(0%) scale(1.05);
+  -o-transform: translateX(-55%) translateY(0%) scale(1.05);
+  transform: translateX(-55%) translateY(0%) scale(1.05);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 1500ms;
+  -moz-transition-duration: 1500ms;
+  transition-duration: 1500ms;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  -moz-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  @media only screen and (max-width: 37.5em) {
+    #video-bg {
+      -webkit-transform: translateX(-50%) translateY(50%) scale(1);
+      -moz-transform: translateX(-50%) translateY(50%) scale(1);
+      -ms-transform: translateX(-50%) translateY(50%) scale(1);
+      -o-transform: translateX(-50%) translateY(50%) scale(1);
+      transform: translateX(-50%) translateY(50%) scale(1);
+      height: auto;
+      bottom: 50%;
+      left: 50%;
+      -webkit-transform: translateX(-50%) translateY(50%) scale(1.05);
+      -moz-transform: translateX(-50%) translateY(50%) scale(1.05);
+      -ms-transform: translateX(-50%) translateY(50%) scale(1.05);
+      -o-transform: translateX(-50%) translateY(50%) scale(1.05);
+      transform: translateX(-50%) translateY(50%) scale(1.05); } }
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 200; }
+  .header-content__heading-main {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 500;
+    text-align: center; }
+

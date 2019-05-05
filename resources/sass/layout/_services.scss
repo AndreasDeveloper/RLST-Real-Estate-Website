@@ -1,0 +1,49 @@
+/* -------------------------- */
+/*       - SERVICES -
+/* -------------------------- */
+
+// Main Services Wrapper
+.services {
+    min-height: 100vh;
+    background-color: $color-secondary-dark;
+    display: flex;
+}
+
+// Services Wrap
+.services-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: -20vh;
+    // Main Text
+    &__main-text {
+        color: $color-white;
+        font-size: 1.5rem;
+        width: 80%;
+        text-align: center;
+        margin-bottom: 12rem;
+        h2 { font-weight: 500; }
+    }
+}
+
+// Service Blocks Wrap
+.service-blocks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Service Block
+.service-block {
+    margin: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // Icon
+    i { color: $color-primary-light; font-size: 6rem; margin-bottom: 2rem; }
+    // Text
+    h3 { color: $color-white; font-size: 1.6rem; font-weight: 400; }
+}
