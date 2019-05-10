@@ -7,6 +7,7 @@
     min-height: 100vh;
     background-color: $color-secondary-dark;
     display: flex;
+    @media only screen and (max-width: $bp-small) { min-height: 120vh; }
 }
 
 // Services Wrap
@@ -17,14 +18,17 @@
     justify-content: center;
     margin: 0 auto;
     margin-top: -20vh;
+    @media only screen and (max-width: $bp-small) { margin-top: -10vh; }
     // Main Text
     &__main-text {
         color: $color-white;
         font-size: 1.5rem;
         width: 80%;
         text-align: center;
+        letter-spacing: .05rem;
         margin-bottom: 12rem;
-        h2 { font-weight: 500; }
+        @media only screen and (max-width: $bp-small) { width: 95%; margin-bottom: 8rem; }
+        h2 { font-weight: 600; }
     }
 }
 
@@ -33,6 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media only screen and (max-width: $bp-small) { flex-direction: column; }
 }
 
 // Service Block
@@ -42,8 +47,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media only screen and (max-width: $bp-small) { margin-bottom: 5rem; }
     // Icon
     i { color: $color-primary-light; font-size: 6rem; margin-bottom: 2rem; }
     // Text
-    h3 { color: $color-white; font-size: 1.6rem; font-weight: 400; }
+    h3 { color: $color-white; font-size: 1.6rem; font-weight: 500; }
 }

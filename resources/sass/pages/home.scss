@@ -8,8 +8,16 @@
     height: 80vh;
 }
 .slider-wrap {
+    position: relative;
     height: 70vh;
-    background-color: red;
+    background-color: transparent;
+    box-shadow: 0 1rem 2rem rgba($color-black, .50);
     margin: 0 25rem;
     margin-top: -25vh;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+ cursor: all-scroll;
+    @media only screen and (max-width: $bp-small) { margin: 0 2rem; margin-top: -15vh; height: 60vh; }
 }

@@ -1,0 +1,17 @@
+/* -------------------------- */
+/*    - SLIDER ANIMATION -
+/* -------------------------- */
+.slider.animating {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    will-change: transform;
+  }
+  .slider.animating .slide__bg {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    will-change: transform;
+  }

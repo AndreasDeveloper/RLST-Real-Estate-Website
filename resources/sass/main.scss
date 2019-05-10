@@ -3,6 +3,7 @@
 // -- Importing Other SASS Files -- \\
 
 // ABSTRACTS
+@import './abstracts/animations';
 @import './abstracts/mixins';
 @import './abstracts/variables';
 // BASE
@@ -11,6 +12,7 @@
 // COMPONENTS
 @import './components/navigation';
 @import './components/search-nav';
+@import './components/slider';
 // LAYOUTS
 @import './layout/header';
 @import './layout/services';
