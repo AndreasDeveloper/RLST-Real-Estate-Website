@@ -1,0 +1,91 @@
+/* -------------------------- */
+/*   - AVAILABILITY SLIDER -
+/* -------------------------- */
+
+// Main Wrapper
+.av-slider {
+    position: relative;
+    width: 100%;
+    margin: 3rem auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+// Slider Elements Wrap
+.av-slider-elements {
+    width: 100%;
+    margin-top: 3rem;
+    padding-left: 7rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.av-slider-elements.active {
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: grabbing;
+}
+
+// Slider Elements
+.av-el {
+    color: $color-white;
+    width: 30rem;
+    height: 35rem;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    font-size: 5rem;
+    -webkit-transform: scale(0.98);
+    transform: scale(0.97); 
+    opacity: 1;
+    // background-color: $color-white;
+    // Text
+    h3 { font-size: 4rem; font-weight: 600; text-transform: uppercase; }
+    // On Hover
+    &:hover { opacity: .95; }
+    // Image Wrapper
+    &__img-wrap {
+        width: 100%;
+        height: 100%;    
+        // Image
+        img { height: 20rem; width: 30rem; }
+    }
+    // Text Content 
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1rem;
+        color: $color-black;
+        height: 30rem;
+        width: 100%;
+        margin-top: -2rem;
+        background-color: $color-white;
+        // Main Info Wrap - Name & Address
+        &__main-info {
+            margin: 3rem 0;
+            margin-left: 5rem;
+        }
+        // Name
+        &__name {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        // Address 
+        &__address {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        // SQFT
+        &__sqft {
+            color: $color-gray-dark-4;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-left: 5rem;
+        }
+    }
+}

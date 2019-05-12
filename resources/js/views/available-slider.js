@@ -1,12 +1,12 @@
 /*global $, console*/
 
 // DOM Elements
-let slider = document.querySelector('.qs-slider-elements-2'),
+let slider = document.querySelector('.av-slider-elements-2'),
     arrows = document.querySelectorAll('.arrows .arr-left, .arrows .arr-right'),
     isDown = false,
     startX,
     scrollLeft;
-    
+
 slider.scrollLeft = 1970;
 
 slider.onmousedown = function (e) {
