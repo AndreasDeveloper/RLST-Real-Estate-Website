@@ -6,8 +6,8 @@ let slider = document.querySelector('.qs-slider-elements-2'),
     isDown = false,
     startX,
     scrollLeft;
+    
 slider.scrollLeft = 1970;
-
 
 slider.onmousedown = function (e) {
     'use strict';

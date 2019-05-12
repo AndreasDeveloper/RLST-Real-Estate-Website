@@ -33,7 +33,6 @@ import { create } from 'domain';
     
     initEvents:function(){
       
-      
       this.$_slider.addEventListener('mousedown', this.onStart.bind(this));
       this.$_slider.addEventListener('touchstart', this.onStart.bind(this));
       
