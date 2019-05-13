@@ -1,0 +1,125 @@
+/* -------------------------- */
+/*         - FOOTER -
+/* -------------------------- */
+
+// Main Footer Wrap
+.footer { min-height: 30vh; position: relative; }
+
+// Footer Background
+.footer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #091D35;
+    opacity: 1;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    transition: opacity 500ms;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        background: rgba($color-secondary-dark, .85);
+        z-index: 2;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        background: linear-gradient(215.14deg, rgba(198,60,70,0) 68%, rgba($color-primary, 0.15) 100%),linear-gradient(180deg, rgba($color-black, 0.15) 0%, rgba($color-primary,0) 80%);
+        z-index: 3;
+    }
+}
+
+// Footer Content
+.footer-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+}
+
+// Footer Text Blocks
+.footer-block {
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: 0 5rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    // Heading 1
+    &__heading-1 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    // Address
+    &__address { font-size: 1.2rem; }
+    // Number
+    &__num { margin-top: 1rem; font-size: 1.2rem; }
+    // Email
+    &__email { margin-bottom: 2rem; font-size: 1.2rem; }
+    // Address, Number & Email text
+    &__address, &__num, &__email { font-weight: 400; }
+}
+
+// Social Media Wrapper
+.social-media-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    i { font-size: 1.8rem; margin: 0 .4rem; cursor: pointer; }
+}
+
+// Footer Divider
+.footer-divider {
+    background-color: rgba($color-gray-1, .30);
+    position: relative;
+    z-index: 999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    height: .1rem;
+    width: 60%;
+}
+
+// Footer Bottom Content
+.footer-bottom-content {
+    position: relative;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 10rem;
+    // Left & Right Side
+    &__left, &__right {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        color: rgba($color-gray-2, .80);
+        font-size: .9rem;
+        h2, h3 { font-weight: 300; margin: 0 .5rem; cursor: pointer; transition: all .2s ease-in-out; &:hover { color: $color-white; } }
+    }
+    // Right Side
+    &__right {
+        h3, a { margin: 0 1rem; }
+    }
+}
