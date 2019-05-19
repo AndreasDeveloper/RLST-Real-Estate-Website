@@ -7,5 +7,6 @@ export const DOMElements = {
     slide: document.querySelector('.slide'),
     sliderControl: document.querySelector('.slider-control'),
     sliderControlLeft: document.querySelector('.slider-control__left'),
-    sliderControlRight: document.querySelector('.slider-control__right')
+    sliderControlRight: document.querySelector('.slider-control__right'),
+    navigationWrap: document.querySelector('.navigation'),
 };

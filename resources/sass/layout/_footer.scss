@@ -3,14 +3,19 @@
 /* -------------------------- */
 
 // Main Footer Wrap
-.footer { min-height: 30vh; position: relative; }
+.footer { min-height: 30vh; position: relative; 
+    @media only screen and (max-width: $bp-small) { min-height: 70vh; }
+    @media only screen and (max-width: $bp-vsmall-1c) { min-height: 85vh; }
+    @media only screen and (max-width: $bp-vsmall-3) { min-height: 100vh; }
+    @media only screen and (max-width: $bp-vsmall-4) { min-height: 120vh; }
+}
 
 // Footer Background
 .footer-bg {
     position: absolute;
     top: 0;
     left: 0;
-    height: 30vh;
+    min-height: 40vh;
     width: 100%;
     overflow: hidden;
     background-color: #091D35;
@@ -24,7 +29,7 @@
         left: 0;
         bottom: 0;
         display: block;
-        height: 100%;
+        min-height: 100%;
         width: 100%;
         opacity: 1;
         background: rgba($color-secondary-dark, .85);
@@ -36,12 +41,16 @@
         left: 0;
         bottom: 0;
         display: block;
-        height: 100%;
+        min-height: 100%;
         width: 100%;
         opacity: 1;
         background: linear-gradient(215.14deg, rgba(198,60,70,0) 68%, rgba($color-primary, 0.15) 100%),linear-gradient(180deg, rgba($color-black, 0.15) 0%, rgba($color-primary,0) 80%);
         z-index: 3;
     }
+    @media only screen and (max-width: $bp-small) { min-height: 70vh; }
+    @media only screen and (max-width: $bp-vsmall-1c) { min-height: 85vh; }
+    @media only screen and (max-width: $bp-vsmall-3) { min-height: 100vh; }
+    @media only screen and (max-width: $bp-vsmall-4) { min-height: 120vh; }
 }
 
 // Footer Content
@@ -51,6 +60,7 @@
     align-items: center;
     justify-content: center;
     z-index: 500;
+    @media only screen and (max-width: $bp-small) { flex-direction: column; }
 }
 
 // Footer Text Blocks
@@ -99,6 +109,8 @@
     margin: 0 auto;
     height: .1rem;
     width: 60%;
+    @media only screen and (max-width: $bp-vsmall-1c) { width: 80%; }
+    @media only screen and (max-width: $bp-vsmall-3) { height: .2rem; width: 80%; }
 }
 
 // Footer Bottom Content
@@ -109,6 +121,8 @@
     align-items: center;
     justify-content: space-around;
     margin: 0 10rem;
+    @media only screen and (max-width: $bp-vsmall-1c) { margin: 0; }
+    @media only screen and (max-width: $bp-vsmall-3) { margin: 0 2rem; }
     // Left & Right Side
     &__left, &__right {
         display: flex;
@@ -117,9 +131,28 @@
         color: rgba($color-gray-2, .80);
         font-size: .9rem;
         h2, h3 { font-weight: 300; margin: 0 .5rem; cursor: pointer; transition: all .2s ease-in-out; &:hover { color: $color-white; } }
+        @media only screen and (max-width: $bp-small) { flex-direction: column; justify-content: center; align-items: flex-start; }
     }
     // Right Side
     &__right {
-        h3, a { margin: 0 1rem; }
+        h3, a { margin: 0 1rem;
+            @media only screen and (max-width: $bp-small) { margin: 0.5rem 1rem; }
+        }
     }
+    // Left Side
+    &__left {
+        h2, h3 {
+            @media only screen and (max-width: $bp-small) { margin: 0.5rem 0; }
+        }
+    }
+}
+
+// Contact Block
+.footer-block-contact {
+    margin-bottom: 10rem;
+}
+
+// Block Wrap
+.footer-block-wrap {
+    display: flex;
 }

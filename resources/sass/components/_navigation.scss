@@ -5,21 +5,22 @@
 // Main navigation wrapper
 .navigation-wrapper {
     position: relative;
-    z-index: 200;
+    z-index: 999;
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(1,25,54,0)), to(#091D35));
     background: linear-gradient(0deg, rgba(1,25,54,0) 0%, #091D35 100%);
+    transition: all .2s ease-in-out;
 }
 
 // Navigation
 .navigation {
     width: 100%;
     // height: 83px;
-    padding-top: 24px;
+    padding-top: 20px;
     overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 200;
+    z-index: 999;
     // Header Wrapper
     &__header {
         display: flex;
@@ -33,6 +34,42 @@
         ul { display: flex; align-items: center; justify-content: center; list-style: none; }
         ul li { color: $color-white; font-size: 1.6rem; margin: 0 1rem; cursor: pointer; }
     }
+    // Navigation Before
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 0%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $color-primary;
+        opacity: 0;
+        -webkit-transition-property: opacity,height;
+        -moz-transition-property: opacity,height;
+        transition-property: opacity,height;
+        -webkit-transition-duration: 300ms,0ms;
+        -moz-transition-duration: 300ms,0ms;
+        transition-duration: 300ms,0ms;
+        -webkit-transition-delay: 0ms,300ms;
+        -moz-transition-delay: 0ms,300ms;
+        transition-delay: 0ms,300ms; 
+    }
+    // Navigation After
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 12rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-primary;
+        z-index: -1;
+        -webkit-transition: height 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        -moz-transition: height 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: height height 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
 }
 
 // Navigation Logo
@@ -40,6 +77,8 @@
     display: flex;
     justify-content: center;
     margin: 0 12rem;
+    @media only screen and (max-width: $bp-medium) { margin: 0 5rem; }
+    @media only screen and (max-width: $bp-small) { margin: 0 15rem; } 
     // Image
     &__image {
         height: 11rem;
@@ -50,10 +89,27 @@
             width: 130px;
             top: -2px;
         }
+        @media only screen and (max-width: $bp-medium) { height: 16rem; }
         @media only screen and (max-width: $bp-small) {
             width: 115px;
             position: relative;
             top: -1px;
         }
+    }
+}
+
+// JS Based Class
+.navOnScroll {
+    &::after {
+        height: 0;
+    }
+}
+
+.navOnScroll.in {
+    &::after {
+        height: 12rem;
+        -webkit-transition: height 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        -moz-transition: height 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition: height 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
 }

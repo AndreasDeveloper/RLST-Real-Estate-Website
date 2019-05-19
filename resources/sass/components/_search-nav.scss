@@ -39,6 +39,8 @@
         width: 37rem;
         transition: all .2s;
         margin-right: -3.25rem;
+        margin-left: -3.25rem;
+        @media only screen and (max-width: $bp-small) { width: 30rem; }
         &:focus {
             outline: none;
             width: 38rem;        // WHEN ELEMENT IS FOCUSED (CLICKED) IT WILL EXTENED. 
