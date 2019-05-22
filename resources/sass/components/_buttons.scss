@@ -24,3 +24,22 @@
     text-decoration: none;
     padding: .6rem;
 }
+
+/* -------------------------- */
+/*       - MENU BUTTONS -
+/* -------------------------- */
+
+.nav-btn, .nav-search {
+    color: $color-white;
+    font-size: 4rem;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    @media only screen and (max-width: $bp-small) { display: block; }
+}
+
+.nav-search {
+    left: 15%;
+}
