@@ -9,4 +9,9 @@ export const DOMElements = {
     sliderControlLeft: document.querySelector('.slider-control__left'),
     sliderControlRight: document.querySelector('.slider-control__right'),
     navigationWrap: document.querySelector('.navigation'),
+    navigationHamburger: document.querySelector('.nav-btn'),
+    navigationSearch: document.querySelector('.nav-search'),
+    navigationLRContent: document.querySelector('.cont'),
+    navigationLeftContent: document.querySelector('.navigation__left-content'),
+    navigationRightContent: document.querySelector('.navigation__right-content'),
 };

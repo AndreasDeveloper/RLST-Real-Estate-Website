@@ -67,6 +67,3 @@ window.onkeydown = function (e) {
         controlsSlider(-10);
     }
 };
-
-
-

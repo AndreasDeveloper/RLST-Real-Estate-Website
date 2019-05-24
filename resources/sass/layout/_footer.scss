@@ -4,6 +4,7 @@
 
 // Main Footer Wrap
 .footer { min-height: 30vh; position: relative; 
+    @media only screen and (max-width: $bp-largest-5) { min-height: 20vh; }
     @media only screen and (max-width: $bp-small) { min-height: 70vh; }
     @media only screen and (max-width: $bp-vsmall-1c) { min-height: 85vh; }
     @media only screen and (max-width: $bp-vsmall-3) { min-height: 100vh; }
@@ -47,6 +48,7 @@
         background: linear-gradient(215.14deg, rgba(198,60,70,0) 68%, rgba($color-primary, 0.15) 100%),linear-gradient(180deg, rgba($color-black, 0.15) 0%, rgba($color-primary,0) 80%);
         z-index: 3;
     }
+    @media only screen and (max-width: $bp-largest-5) { min-height: 25vh; }
     @media only screen and (max-width: $bp-small) { min-height: 70vh; }
     @media only screen and (max-width: $bp-vsmall-1c) { min-height: 85vh; }
     @media only screen and (max-width: $bp-vsmall-3) { min-height: 100vh; }
@@ -72,7 +74,7 @@
     justify-content: space-evenly;
     margin: 0 5rem;
     margin-top: 5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
     // Heading 1
     &__heading-1 {
         font-size: 1.8rem;
@@ -145,11 +147,6 @@
             @media only screen and (max-width: $bp-small) { margin: 0.5rem 0; }
         }
     }
-}
-
-// Contact Block
-.footer-block-contact {
-    margin-bottom: 10rem;
 }
 
 // Block Wrap
