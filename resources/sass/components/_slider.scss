@@ -41,6 +41,7 @@
     transform: translateX(-50%);
     font-size: 0;
     list-style-type: none;
+    @media only screen and (max-width: $bp-small) { bottom: 10rem; }
     &__elem {
         position: relative;
         display: inline-block;
@@ -175,6 +176,7 @@
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     opacity: 0;
+    @media only screen and (max-width: $bp-small) { width: 100%; left: 0; bottom: -1%; }
   }
   a.slide__text-link:hover { text-decoration: none; color:$color-white; }
   .slide__text-heading {

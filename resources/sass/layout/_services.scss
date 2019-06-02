@@ -8,7 +8,7 @@
     background-color: $color-secondary-dark;
     display: flex;
     @media only screen and (max-width: $bp-largest-5) { min-height: 80vh; }
-    @media only screen and (max-width: $bp-small) { min-height: 220vh; }
+    @media only screen and (max-width: $bp-small) { min-height: 180vh; }
 }
 
 // Services Wrap
@@ -19,7 +19,7 @@
     justify-content: center;
     margin: 0 auto;
     margin-top: -20vh;
-    @media only screen and (max-width: $bp-small) { margin-top: -115vh; }
+    @media only screen and (max-width: $bp-small) { margin-top: -95vh; }
     // Main Text
     &__main-text {
         color: $color-white;
