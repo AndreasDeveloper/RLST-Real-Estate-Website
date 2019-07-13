@@ -39,15 +39,8 @@ body {
     font-family: 'Raleway', 'Arial', 'serif';
     background-color: $color-gray-1;
     overflow-x: hidden;
-    //padding: 3rem;  /* Gives padding all around the body element, making white space on the sides. */
-
     // * --- MEDIA QUERIES --- * \\
     @include respond(tab-port) {
         padding: 0;
     }
-}
-
-// CUSTOM SELECT EFFECT WHEN SELECTING TEXT ON WEBSITE \\
-::selection {
-   
 }
